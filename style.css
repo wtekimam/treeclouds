@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300, 400|Raleway');
+
+h1,
+h2,
+h3 {
+  font-family: 'Raleway';
+}
+
+p {
+  font-family: 'Open Sans';
+}
+
+.box1 {
+  background-color: #fff;
+  color: #222;
+  padding: 20px 50px 50px 50px;
+  text-align: center;
+}
+
+.box2 {
+  background-color: rgb(246,249,251);
+  color: #222;
+  padding: 20px 50px 50px 50px;
+  text-align: center;
+}
+
+.box3 {
+  background-color: rgb(246,249,251);
+  color: #222;
+  padding: 0 0 0 0;
+  text-align: center;
+}
+
+/* grid markers for "Our Services" */
+
+.serviceH {
+  grid-area: serviceH;
+  text-align: center;
+  padding: 0px 0 0 0;
+}
+
+.service1 {
+  grid-area: service1;
+  text-align: left;
+}
+
+.service2 {
+  grid-area: service2;
+  text-align: left;
+}
+
+.service3 {
+  grid-area: service3;
+  text-align: left;
+}
+
+
+/* grid markers for "Our Portfolio" */
+
+.portfolioH {
+  grid-area: portfolioH;
+  text-align: center;
+  padding: 50px 0 0 0;
+}
+
+.port1 {
+  grid-area: port1;
+}
+
+port2 {
+  grid-area: port2;
+}
+
+port3 {
+  grid-area: port3;
+}
+
+port4 {
+  grid-area: port4
+}
+
+port5 {
+  grid-area: port5;
+}
+
+port6 {
+  grid-area: port6;
+}
+
+
+/* testimonials things */
+
+.testimonials {
+  grid-area: testimonials;
+  text-align: center;
+  padding: 0 25% 3% 25%;
+}
+
+/* figures and stats */
+
+.fig1 {
+  grid-area: fig1;
+}
+
+.fig2 {
+  grid-area: fig2;
+}
+
+.fig3 {
+  grid-area: fig3;
+}
+
+
+/* why us part */
+
+.whyUsH {
+  grid-area: whyUsH;
+  text-align: center;
+  padding: 50px 0 0 0;
+}
+
+.why1 {
+  grid-area: why1;
+}
+
+.why2 {
+  grid-area: why2;
+}
+
+.why3 {
+  grid-area: why3;
+}
+
+
+/* creating wrapper for the whole page */
+/* display for mobile devices*/
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  "serviceH"
+  "service1"
+  "service2"
+  "service3"
+  "portfolioH"
+  "port1"
+  "port2"
+  "port3"
+  "port4"
+  "port5"
+  "port6"
+  "testimonials"
+  "fig1"
+  "fig2"
+  "fig3"
+  "whyUsH"
+  "why1"
+  "why2"
+  "why3";
+}
+
+.contactF {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+
+.form {
+  text-align: center;
+  padding-left: 10%;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* display for tablets */
+
+  .fig3 {
+    grid-area: fig3;
+    text-align: center;
+  }
+
+  .service3 {
+    grid-area: service3;
+    text-align: center;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "serviceH serviceH"
+    "service1 service2"
+    "service3 service3"
+    "portfolioH portfolioH"
+    "port1 port2"
+    "port3 port4"
+    "port5 port6"
+    "testimonials testimonials"
+    "fig1 fig2"
+    "fig3 fig3"
+    "whyUsH whyUsH"
+    "why1 why2"
+    "why3 why3";
+  }
+
+  .contactF {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* display for bigger tablets and computers */
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+    "serviceH serviceH serviceH"
+    "service1 service2 service3"
+    "portfolioH portfolioH portfolioH"
+    "port1 port2 port3"
+    "port4 port5 port6"
+    "testimonials testimonials testimonials"
+    "fig1 fig2 fig3"
+    "whyUsH whyUsH whyUsH"
+    "why1 why2 why3";
+  }
+
+  .contactF {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+/* for forms */
+
+input[type=text], select, textarea {
+  width: 70%;
+  padding: 1.2em;
+  border: 1px solid #ccc;
+  border-radius: 0.5em;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+  resize: vertical;
+}
+
+/* Style the submit button with a specific background color etc */
+
+input[type=submit] {
+  background-color: rgb(0,214,97);
+
+  padding: 1em 2em;
+  border: none;
+  border-radius: 4px;
+  margin: 10px 0 0 0 ;
+
+  color: white;
+  font-size: 0.8em;
+
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+input[type=submit]:hover {
+  background-color: rgb(0,164,97);
+}
+
+/* creating shapes for pics and text that needs them */
+
+.circle {
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 50%;
+  margin: auto;
+
+  font-size: 2em;
+  color: #fff;
+
+  line-height: 3.5em;
+  text-align: center;
+  background: rgb(0,214,97);
+}
+
+.rectangle {
+  width: 100%;
+  height: 5em;
+  margin: auto;
+
+  font-size: 2em;
+  color: #fff;
+
+  line-height: 2em;
+  text-align: center;
+  background: #bbb;
+}
+
+#map {
+  width: 100%;
+  height: 600px;
+  background-color: grey;
+}

@@ -24,13 +24,6 @@ p {
   text-align: center;
 }
 
-.box3 {
-  background-color: rgb(246,249,251);
-  color: #222;
-  padding: 0 0 0 0;
-  text-align: center;
-}
-
 /* grid markers for "Our Services" */
 
 .serviceH {
@@ -39,19 +32,19 @@ p {
   padding: 0px 0 0 0;
 }
 
-.service1 {
+#service1 {
   grid-area: service1;
-  text-align: left;
+  text-align: left !important;
 }
 
-.service2 {
+#service2 {
   grid-area: service2;
-  text-align: left;
+  text-align: left !important;
 }
 
-.service3 {
+#service3 {
   grid-area: service3;
-  text-align: left;
+  text-align: left !important;
 }
 
 
@@ -67,23 +60,23 @@ p {
   grid-area: port1;
 }
 
-port2 {
+.port2 {
   grid-area: port2;
 }
 
-port3 {
+.port3 {
   grid-area: port3;
 }
 
-port4 {
+.port4 {
   grid-area: port4
 }
 
-port5 {
+.port5 {
   grid-area: port5;
 }
 
-port6 {
+.port6 {
   grid-area: port6;
 }
 

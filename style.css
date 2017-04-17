@@ -1,5 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300, 400|Raleway');
 
+/*  ---------------------------
+        TABLE OF CONTENTS
+    ---------------------------
+
+    0.0   Global Styling
+    0.1   Typograph
+    1.0   index.html Styling
+    1.1   
+*/
+
+
+
+/*  ---------------------------
+        0.0 GLOBAL STYLING
+    --------------------------- */
+
+/*  ---------------------------
+      0.1 TYPOGRAPHIC ELEMENTS
+    --------------------------- */
+
+
 h1,
 h2,
 h3 {
@@ -9,6 +30,11 @@ h3 {
 p {
   font-family: 'Open Sans';
 }
+
+
+/*  ---------------------------
+      1.0 INDEX.HTML STYLING
+    --------------------------- */
 
 .box1 {
   background-color: #fff;
@@ -163,7 +189,7 @@ p {
   padding-left: 10%;
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media all (min-width: 768px) and (max-width: 1023px) {
   /* display for tablets */
 
   .fig3 {

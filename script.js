@@ -1,3 +1,5 @@
+// for google maps
+
 function initMap() {
   var indomind = {
     lat: -6.230735,

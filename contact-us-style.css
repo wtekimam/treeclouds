@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+.box {
+  background-color: #666666;
+}
+
+.header {
+  grid-area: header;
+  text-align: left;
+}
+
+.contact-us {
+  grid-area: contact;
+  text-align: center;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 5px;
+  grid-auto-rows: auto;
+  grid-template-area:
+    "header header header header"
+    "contact contact contact contact"
+}

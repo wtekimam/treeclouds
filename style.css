@@ -1,256 +1,72 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300, 400|Raleway');
 
-/*  ---------------------------
-        TABLE OF CONTENTS
-    ---------------------------
-
-    0.0   Global Styling
-    0.1   Typograph
-    1.0   index.html Styling
-    1.1   
-*/
-
-
-
-/*  ---------------------------
-        0.0 GLOBAL STYLING
-    --------------------------- */
-
-/*  ---------------------------
-      0.1 TYPOGRAPHIC ELEMENTS
-    --------------------------- */
-
-
-h1,
-h2,
-h3 {
-  font-family: 'Raleway';
+h1, h2, h3 {
+  font-family: raleway;
 }
+
+h1 { font-size: 2.5em; }
 
 p {
-  font-family: 'Open Sans';
+  font-family: Open Sans;
+  margin-bottom: 15px;
 }
 
-
-/*  ---------------------------
-      1.0 INDEX.HTML STYLING
-    --------------------------- */
+body {
+  text-align: center;
+}
 
 .box1 {
   background-color: #fff;
   color: #222;
-  padding: 20px 50px 50px 50px;
-  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
 }
 
 .box2 {
   background-color: rgb(246,249,251);
   color: #222;
-  padding: 20px 50px 50px 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: auto;
+
+  font-size: 2em;
+  color: #fff;
+
+  line-height: 150px;
   text-align: center;
+  background: rgb(0,214,97);
 }
 
-/* grid markers for "Our Services" */
+.rectangle {
+  width: 300px;
+  height: 200px;
+  margin: auto;
 
-.serviceH {
-  grid-area: serviceH;
+  font-size: 2em;
+  color: #222;
+
+  line-height: 2em;
   text-align: center;
-  padding: 0px 0 0 0;
+  background: #bbb;
 }
 
-#service1 {
-  grid-area: service1;
-  text-align: left !important;
-}
-
-#service2 {
-  grid-area: service2;
-  text-align: left !important;
-}
-
-#service3 {
-  grid-area: service3;
-  text-align: left !important;
-}
-
-
-/* grid markers for "Our Portfolio" */
-
-.portfolioH {
-  grid-area: portfolioH;
-  text-align: center;
-  padding: 50px 0 0 0;
-}
-
-.port1 {
-  grid-area: port1;
-}
-
-.port2 {
-  grid-area: port2;
-}
-
-.port3 {
-  grid-area: port3;
-}
-
-.port4 {
-  grid-area: port4
-}
-
-.port5 {
-  grid-area: port5;
-}
-
-.port6 {
-  grid-area: port6;
-}
-
-
-/* testimonials things */
-
-.testimonials {
-  grid-area: testimonials;
-  text-align: center;
-  padding: 0 25% 3% 25%;
-}
-
-/* figures and stats */
-
-.fig1 {
-  grid-area: fig1;
-}
-
-.fig2 {
-  grid-area: fig2;
-}
-
-.fig3 {
-  grid-area: fig3;
-}
-
-
-/* why us part */
-
-.whyUsH {
-  grid-area: whyUsH;
-  text-align: center;
-  padding: 50px 0 0 0;
-}
-
-.why1 {
-  grid-area: why1;
-}
-
-.why2 {
-  grid-area: why2;
-}
-
-.why3 {
-  grid-area: why3;
-}
-
-
-/* creating wrapper for the whole page */
-/* display for mobile devices*/
 .wrapper {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas:
-  "serviceH"
-  "service1"
-  "service2"
-  "service3"
-  "portfolioH"
-  "port1"
-  "port2"
-  "port3"
-  "port4"
-  "port5"
-  "port6"
-  "testimonials"
-  "fig1"
-  "fig2"
-  "fig3"
-  "whyUsH"
-  "why1"
-  "why2"
-  "why3";
 }
 
-.contactF {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-
-.form {
-  text-align: center;
-  padding-left: 10%;
-}
-
-@media all (min-width: 768px) and (max-width: 1023px) {
-  /* display for tablets */
-
-  .fig3 {
-    grid-area: fig3;
-    text-align: center;
-  }
-
-  .service3 {
-    grid-area: service3;
-    text-align: center;
-  }
-
-  .wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-    "serviceH serviceH"
-    "service1 service2"
-    "service3 service3"
-    "portfolioH portfolioH"
-    "port1 port2"
-    "port3 port4"
-    "port5 port6"
-    "testimonials testimonials"
-    "fig1 fig2"
-    "fig3 fig3"
-    "whyUsH whyUsH"
-    "why1 why2"
-    "why3 why3";
-  }
-
-  .contactF {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (min-width: 1024px) {
-  /* display for bigger tablets and computers */
-
-  .wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas:
-    "serviceH serviceH serviceH"
-    "service1 service2 service3"
-    "portfolioH portfolioH portfolioH"
-    "port1 port2 port3"
-    "port4 port5 port6"
-    "testimonials testimonials testimonials"
-    "fig1 fig2 fig3"
-    "whyUsH whyUsH whyUsH"
-    "why1 why2 why3";
-  }
-
-  .contactF {
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
+#map {
+  width: 100%;
+  height: 600px;
+  background-color: grey;
 }
 
 /* for forms */
@@ -264,6 +80,8 @@ input[type=text], select, textarea {
   margin-bottom: 0.2em;
   resize: vertical;
 }
+
+textarea { font-family: Open Sans; font-size: 0.7em }
 
 /* Style the submit button with a specific background color etc */
 
@@ -286,37 +104,18 @@ input[type=submit]:hover {
   background-color: rgb(0,164,97);
 }
 
-/* creating shapes for pics and text that needs them */
+@media only screen and (min-width: 500px) {
+  .title { grid-column: 1 / span 3; }
+  .form { grid-column: 1 }
+  .gMaps { grid-column: 2; }
 
-.circle {
-  width: 3.5em;
-  height: 3.5em;
-  border-radius: 50%;
-  margin: auto;
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-  font-size: 2em;
-  color: #fff;
-
-  line-height: 3.5em;
-  text-align: center;
-  background: rgb(0,214,97);
-}
-
-.rectangle {
-  width: 100%;
-  height: 5em;
-  margin: auto;
-
-  font-size: 2em;
-  color: #fff;
-
-  line-height: 2em;
-  text-align: center;
-  background: #bbb;
-}
-
-#map {
-  width: 100%;
-  height: 600px;
-  background-color: grey;
+  .contactF {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

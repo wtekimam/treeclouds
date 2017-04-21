@@ -1,46 +1,63 @@
 <head>
-  <title>Contact Us</title>
+    <title>TreeClouds</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="contact-us-style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src=“https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js“></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdiS7BtX0Oqxiwc0f0-DndWdIVYgc7Hzw&callback=initMap"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="script.js"></script>
 </head>
 
-<!-- Top Menu -->
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">LogoHere</a>
+<body>
+    <!--
+    <div class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Logo</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a class="active" href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+            </ul>
+        </div>
+    </div> -->
+    <div class="header box">
+        <h1>Get In Touch</h1>
+        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque eget risus in tempus. Phasellus nulla libero, ultrices vel luctus at, hendrerit a urna. Suspendisse sit amet justo lorem. Sed.</h4>
+        <button href="#a" class="btnHeader">Leave us a Message</button>
     </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a class="active" href="#">Link</a></li>
-      <li><a href="#">Link</a></li>
-      <li><a href="#">Link</a></li>
-      <li><a href="#">Link</a></li>
-      <button type="button" class="btn">Button</button>
-    </ul>
-  </div>
-</nav>
-<!-- =============================== -->
-
-<!-- Headline -->
-<div class="box header">
-  <h1>Get In Touch</h1>
-  <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque eget risus in tempus. Phasellus nulla libero, ultrices vel luctus at, hendrerit a urna. Suspendisse sit amet justo lorem. Sed.</h4>
-  <button class="btn">Leave us a Message</button>
-</div>
-<!-- =============================== -->
-
-<!-- Contact Us Section -->
-<div class="contact-us box">
-  <h2>Contact Us</h2><br>
-  <p>Donec pellentesque eget risus in tempus. Phasellus nulla libero, ultrices vel luctus at, hendrerit a urna.</p>
-  <div class="container">
-    <form class="form">
-      <label id="name">Your Name</label><input type="text" name="name">
-      <label id="email">Your Email</label><input type="email" name="email"><br>
-    </form>
-  </div>
-</div>
+    <div id="contact-us" class="contact-us box">
+        <div class="title">
+            <h2>Contact Us</h2>
+            <p>Donec pellentesque eget risus in tempus. Phasellus nulla libero, ultrices vel luctus at, hendrerit a urna.</p>
+        </div>
+        <div class="container">
+            <form class="form">
+                <p id="name" class="labelname">Your Name</p>
+                <input type="text" name="name" class="inputname" placeholder="Full Name">
+                <p id="email" class="labelemail">Your Email</p>
+                <input type="email" name="email" class="inputemail" placeholder="Email">
+                <p id="tel" class="labeltel">Phone Number</p>
+                <input type="tel" name="tel" class="inputtel" placeholder="Phone">
+                <p id="company" class="labelcompany">Company</p>
+                <input type="text" name="company" class="inputcompany" placeholder="(optional)">
+                <p id="message" class="labelmessage">Message</p>
+                <textarea class="textarea" rows="4" col="5" placeholder="Message..."></textarea>
+                <button class="btnSubmit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="locate-us box">
+        <div class="title">
+            <h2>Locate Us</h2><br>
+        </div>
+        <div class="box2 gMaps">
+            <h2> Our Location </h2>
+                <div id="map"></div>
+        </div>
+    </div>
+</body>

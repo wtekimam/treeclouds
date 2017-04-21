@@ -1,25 +1,161 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
-.box {
-  background-color: #666666;
+@media only screen and (min-width: 360px)
+{
+    .header {
+        background: #eaebed;
+        text-align: left;
+        padding: 20 20 50 20;
+    }
+    
+    h1, h2, h3 {
+        font-family: raleway;
+    }
+
+    h1 {
+        font-size: 2.5em; 
+    }
+
+    p {
+        font-family: Open Sans;
+        margin-bottom: 10px;
+    }
+    
+    /* Style the submit button with a specific background color etc */
+    button {
+        background-color: rgb(0,214,97);
+        padding: 1.2em 2em;
+        border: none;
+        border-radius: 4px;
+        margin: 10px 0 0 0 ;
+        color: white;
+    }
+    
+    .title {
+        text-align: center;
+    }
+    
+    form {
+        display: grid;
+        text-align: left;
+    }
+
+    input,textarea {
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;        
+        border-bottom: 1px solid;
+        border-bottom-color: black;       
+        outline: 0;
+        background: transparent;
+        margin-bottom: 10px;
+    }
 }
 
-.header {
-  grid-area: header;
-  text-align: left;
-}
+@media only screen and (min-width: 768px)
+{
+    .header {
+        background: #eaebed;
+        text-align: left;
+        padding: 50 25% 100 50;
+    }
+    
+    button{
+        background-color: rgb(0,214,97);
+        padding: 1em 2em;
+        border: none;
+        border-radius: 4px;
+        margin: 10px 0 0 0 ;
+        color: white;
+        font-size: 0.8em;
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+    }
+    
+    button:hover {
+        background-color: rgb(0,164,97);
+    }
 
-.contact-us {
-  grid-area: contact;
-  text-align: center;
-}
+    .title {
+        text-align: center;
+    }
 
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 5px;
-  grid-auto-rows: auto;
-  grid-template-area:
-    "header header header header"
-    "contact contact contact contact"
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .labelname {
+        grid-area: labelname;
+    }
+
+    .inputname {
+        grid-area: inputname;
+    }
+
+    .labelemail {
+        grid-area: labelemail;
+    }
+
+    .inputemail {
+        grid-area: inputemail;
+    }
+
+    .labeltel {
+        grid-area: labeltel;
+    }
+
+    .inputtel {
+        grid-area: inputtel;
+    }
+
+    .labelcompany {
+        grid-area: labelcompany;
+    }
+
+    .inputcompany {
+        grid-area: inputcompany;
+    }
+
+    .labelmessage {
+        grid-area: labelmessage;
+    }
+
+    .textarea {
+        grid-area: inputtextarea;
+    }
+
+    .btnSubmit {
+        grid-area: btn;
+        justify-self: end;
+        width: 50%;
+    }    
+
+    form {
+        display: grid;
+        grid-auto-rows: auto;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+            ". labelname labelemail ."
+            ". inputname inputemail ."
+            ". labeltel labelcompany ."
+            ". inputtel inputcompany ."
+            ". labelmessage labelmessage ."
+            ". inputtextarea inputtextarea ."
+            ". . btn ."
+    }
+
+    input , textarea{
+        width: 100%;
+        padding: 1.2em;
+        border: 1px solid #ccc;
+        border-radius: 0.5em;
+        margin-top: 0.2em;
+        margin-bottom: 0.2em;
+        resize: vertical;
+        grid-column: 1 / span: 3;
+    }
+
+    textarea { 
+        font-family: Open Sans; font-size: 1em }
 }

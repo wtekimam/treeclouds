@@ -1,0 +1,84 @@
+.home-portfolio-image { 
+  width: 80vw; 
+  height: auto; 
+  transition: all 0.75s ease-in-out; }
+.home-portfolio-image:hover {
+  filter: opacity(70%);
+
+}
+
+.picContainer {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  margin: auto;
+  vertical-align: middle;
+
+  background: rgb(209,209,209);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__image { width: auto; height: 95vh; }
+
+.bgHero { 
+  background-image: url(images/pics/heroBackground.png);
+  background-size: cover;
+  background-position: center bottom; 
+}
+
+.circle {
+  width: 50vw;
+  height: 50vw;
+  border-radius: 50%;
+  margin: auto;
+
+  font-size: 2em;
+  color: #fff;
+
+  line-height: 50vw;
+  text-align: center;
+  background: rgb(0,214,97);
+}
+
+.rectangle {
+  width: 300px;
+  height: 200px;
+  margin: auto;
+
+  font-size: 2em;
+  color: #222;
+
+  line-height: 2em;
+  text-align: center;
+  background: #bbb;
+}
+
+#map {
+  width: 100%;
+  height: 600px;
+  background-color: grey;
+}
+
+@media only screen and (min-width: 500px) {
+  .title { grid-column: 1 / span 3; }
+  .header { grid-column: 1 / span 3; }
+  .form { grid-column: 1; }
+  .gMaps { grid-column: 2; }
+
+  .circle { width: 125px; height: 125px; line-height: 125px; }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .contactF {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home-portfolio-Image { width: 90%; height: 90%; }
+}
